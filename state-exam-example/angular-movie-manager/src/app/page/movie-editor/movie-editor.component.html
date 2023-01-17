@@ -22,6 +22,24 @@
                 <input required [(ngModel)]="movie.active" name="active" type="text" class="form-control">
             </div>
 
+          <div class="form-group">
+        <label for="form-select" class="form-label">Category</label>
+        <select class="form-select"
+        aria-label="Default select example"
+        required
+        name="category"
+        [(ngModel)]="movie.category">
+
+          <option value="Fantasy">Fantasy</option>
+          <option value="Action">Action</option>
+          <option value="Thriller">Thriller</option>
+        </select>
+      </div>
+      <div class="form-group form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"  [(ngModel)]="movie.active" name="active">
+        <label class="form-check-label" for="flexSwitchCheckChecked">Active</label>
+      </div>
+          
             <div class="d-grid mt-3">
                 <button [disabled]="movieForm.invalid" class="btn btn-primary btn-lg">
                     <i class="fa fa-save"></i> Update
